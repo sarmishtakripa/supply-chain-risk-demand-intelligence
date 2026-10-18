@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "supply-chain-risk-demand-intelligence"
+version = "0.1.0"
+description = "Leakage-aware Olist delivery risk and weekly demand portfolio platform"
+requires-python = ">=3.12"
+dependencies = [
+  "duckdb==1.4.1",
+  "numpy==2.3.4",
+  "pandas==2.3.3",
+  "scikit-learn==1.7.2",
+  "pydantic-settings==2.11.0",
+  "fastapi==0.119.0",
+  "uvicorn==0.38.0",
+  "streamlit==1.50.0",
+  "plotly==6.3.1",
+  "requests==2.32.5",
+  "joblib==1.5.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2", "httpx==0.28.1", "ruff==0.14.1", "pip-tools==7.5.1"]
+
+[tool.setuptools.packages.find]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"

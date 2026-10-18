@@ -1,0 +1,13 @@
+.env
+.venv/
+.idea/
+*.iml
+.DS_Store
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+data/
+artifacts/
+input/
+*.egg-info/
